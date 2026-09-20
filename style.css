@@ -1,0 +1,229 @@
+/* ===== Warna dasar: putih, hijau, aksen kuning ===== */
+:root {
+  --hijau-tua: #14663a;
+  --hijau: #1f8a4c;
+  --hijau-muda: #eaf6ee;
+  --kuning: #f7c948;
+  --putih: #ffffff;
+  --teks: #23302a;
+  --abu: #5d6b63;
+  --garis: #dde7e0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  color: var(--teks);
+  background-color: var(--putih);
+  line-height: 1.7;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--hijau-tua);
+  color: var(--putih);
+  padding: 20px;
+  border-bottom: 5px solid var(--kuning);
+}
+
+.isi-header {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Tempat logo sekolah: ganti file logo.png dengan logo milikmu */
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  background-color: var(--putih);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+header p {
+  margin: 2px 0 0;
+  color: var(--kuning);
+  font-size: 14px;
+}
+
+/* ===== Menu navigasi ===== */
+nav {
+  background-color: var(--hijau);
+}
+
+nav ul {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav a {
+  display: block;
+  padding: 14px 22px;
+  color: var(--putih);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--hijau-tua);
+}
+
+nav a.aktif {
+  background-color: var(--putih);
+  color: var(--hijau-tua);
+}
+
+/* ===== Isi halaman ===== */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px 20px 50px;
+}
+
+section {
+  margin-bottom: 36px;
+}
+
+h2 {
+  color: var(--hijau-tua);
+  border-left: 6px solid var(--kuning);
+  padding-left: 12px;
+  margin-top: 0;
+}
+
+h3 {
+  color: var(--hijau);
+  margin-bottom: 4px;
+}
+
+.kotak {
+  background-color: var(--hijau-muda);
+  border: 1px solid var(--garis);
+  border-radius: 10px;
+  padding: 20px 24px;
+}
+
+.jurusan {
+  border: 1px solid var(--garis);
+  border-top: 4px solid var(--hijau);
+  border-radius: 10px;
+  padding: 18px 24px;
+  margin-bottom: 18px;
+}
+
+/* ===== Tabel ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+caption {
+  text-align: left;
+  color: var(--abu);
+  padding-bottom: 8px;
+}
+
+th, td {
+  border: 1px solid var(--garis);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--hijau);
+  color: var(--putih);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--hijau-muda);
+}
+
+tfoot td {
+  background-color: var(--kuning);
+  font-weight: 700;
+}
+
+/* ===== Form kontak ===== */
+form {
+  max-width: 560px;
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--garis);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: 3px solid var(--kuning);
+  border-color: var(--hijau);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin-top: 20px;
+  background-color: var(--hijau);
+  color: var(--putih);
+  border: none;
+  border-radius: 6px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--hijau-tua);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--hijau-tua);
+  color: var(--putih);
+  text-align: center;
+  padding: 18px;
+  border-top: 5px solid var(--kuning);
+  font-size: 14px;
+}
+
+/* ===== Tampilan layar kecil ===== */
+@media (max-width: 600px) {
+  .isi-header { justify-content: center; text-align: center; }
+  nav ul { flex-direction: column; }
+  header h1 { font-size: 21px; }
+}
